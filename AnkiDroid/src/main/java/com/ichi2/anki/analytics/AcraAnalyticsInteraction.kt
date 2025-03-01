@@ -29,7 +29,10 @@ import java.io.File
  * Questions answered: "Number of ACRA reports sent", "ACRA vs Analytics count differences"
  * See <a href="https://github.com/ACRA/acra/wiki/Custom-Extensions">Custom Extensions</a>
  */
+// It is required because ACRA dynamically loads this class via reflection,
+// meaning it might not be directly referenced in the codebase
 @AutoService(ReportInteraction::class)
+@Suppress("unused") // This annotation suppresses warnings about unused classes
 class AcraAnalyticsInteraction : ReportInteraction {
     override fun performInteraction(
         context: Context,
