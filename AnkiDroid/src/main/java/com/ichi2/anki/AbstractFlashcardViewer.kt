@@ -1051,7 +1051,7 @@ abstract class AbstractFlashcardViewer :
         performClickWithVisualFeedback(cardOrdinal)
     }
 
-    // #5780 - Users could OOM the WebView Renderer. This triggers the same symptoms.
+    // #5780 - Users could OOM the WebView Renderer. This triggers the same symptoms
     @VisibleForTesting
     fun crashWebViewRenderer() {
         loadUrlInViewer("chrome://crash")
